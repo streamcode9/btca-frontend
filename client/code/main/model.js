@@ -38,20 +38,7 @@ function forceBlock(x)
 
 model.on('change:status', function (model, status)
 {
-	if (status == 'ok')
-	{
-		var nickname = model.get("nickname")
-		if (typeof nickname == 'string')
-		{
-			$('#user').text("Logged in as " + nickname.slice(0, 25))
-		}
-		else
-		{
-			$('#user').text("Not logged in")
-		}
-		return
-	}
-	$('#user').text(status)
+	$('#status').text(status)
 })
 
 function addDays(ts, days)

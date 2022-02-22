@@ -1,6 +1,7 @@
 'use strict'
 const user = require('./user')
 	, authLog = require('./log').openLog('auth')
+	, config = require('./config').auth0
 	, util = require('util')
 	, { ExpressOIDC } = require('@okta/oidc-middleware')
 
@@ -66,8 +67,8 @@ const oidc = new ExpressOIDC({
 			},
 		}
 	},
-	client_id: '1',
-	client_secret: '2'
+	client_id: config.client_id,
+	client_secret: config.client_secret
 })
 
 oidc.on('ready', () => {

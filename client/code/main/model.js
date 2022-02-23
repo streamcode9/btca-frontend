@@ -38,7 +38,9 @@ function forceBlock(x)
 
 model.on('change:status', function (model, status)
 {
-	$('#status').text(status)
+	if (status == 'ok') return
+
+	$('#user').text(status)
 })
 
 function addDays(ts, days)

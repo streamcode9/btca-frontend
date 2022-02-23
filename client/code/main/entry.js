@@ -33,7 +33,8 @@ function onAppInit(f)
 	,	isSubscribed : f.isSubscribed
 	})
 
-	model.set({status: "Receiving chart data"})
+	// model.set({status: "Receiving chart data"})
+	model.set({status: "ok"})
 	bench.stop('onAppInit')
 	
 	model2.set('general-ui.appInitFinished', true)

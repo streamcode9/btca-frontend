@@ -77,7 +77,7 @@ $(function () {
 	$('#logout-button').button().click(function()
 	{
 		ss.rpc('app.logout', function(){
-			document.location.reload()
+			document.location = '/logout-auth0'
 		})
 	})
 

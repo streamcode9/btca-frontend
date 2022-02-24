@@ -52,6 +52,10 @@ function routes(app)
 	{
 		res.serveClient('main')
 	})
+	app.get('/logout-auth0', (req, res) => {
+		req.logout()
+		res.redirect('/')
+	})
 	app.all('/engine.io/*', (req, res, next) => socketIoRequestHandler(req, res, next))
 }
 

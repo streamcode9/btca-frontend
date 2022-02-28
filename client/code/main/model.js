@@ -1,6 +1,10 @@
 var	billing = require('/billing')
 const map = require('/map')
-const config ={}
+const config = { enabledPlans: {
+	Econom:  { createAccountButtonText: 'Econom'  },
+	Premium: { createAccountButtonText: 'Premium' },
+	VIP:     { createAccountButtonText: 'VIP' }
+}}
 var model = new Backbone.Model()
 
 var debugAddress = config.enablePayflowDebugAddress
